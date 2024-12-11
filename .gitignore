@@ -1,0 +1,7 @@
+# Project
+node_modules
+build
+package-lock.json
+
+# Mac OS
+.DS_Store
