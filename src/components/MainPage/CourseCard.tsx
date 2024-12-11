@@ -6,9 +6,9 @@ interface CourseCardProps {
   course: Course;
 }
 
-const CourseCard: React.FC<CourseCardProps> = ({ key, course }) => {
+const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
   return (
-    <div className="course-card" key={key}>
+    <div className="course-card">
       <img
         className="course-thumbnail"
         src={course.thumbnail}

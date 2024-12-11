@@ -19,7 +19,11 @@ const CourseList: React.FC = () => {
   return (
     <section className="course-list">
       <h2>인기 강의</h2>
-      <div className="course-grid" ref={scrollContainerRef}>
+      <div
+        className="course-grid"
+        ref={scrollContainerRef}
+        data-testid={"course-grid"}
+      >
         {courses.map((course) => (
           <CourseCard key={course.id} course={course} />
         ))}
