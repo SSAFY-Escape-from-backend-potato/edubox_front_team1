@@ -1,8 +1,26 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./components/common/Header";
+import MainPage from "./pages/MainPage/MainPage";
+import LoginPage from "./pages/LoginPage/LoginPage";
+import SignupPage from "./pages/SignupPage/SignupPage";
+import UserPage from "./pages/UserPage/UserPage";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import "./styles/App.css";
 
-function App() {
-  return <div className="App">안녕하세요 묵호입니다.</div>;
-}
+const App: React.FC = () => {
+  return (
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/user/:id" element={<UserPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </Router>
+  );
+};
 
 export default App;
