@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import CourseList from "../components/MainPage/CourseList";
+import CourseList from "../../components/MainPage/CourseList";
 
 describe("CourseList", () => {
   it("왼쪽 스크롤 버튼이 비활성화되어 있는가", () => {
@@ -20,7 +20,6 @@ describe("CourseList", () => {
     render(<CourseList />);
     const scrollContainer = screen.getByTestId("course-grid");
     const leftButton = screen.getByText("<");
-    const rightButton = screen.getByText(">");
 
     fireEvent.scroll(scrollContainer, { target: { scrollLeft: 296 } });
 

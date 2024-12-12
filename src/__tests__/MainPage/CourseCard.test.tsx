@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import CourseCard from "../components/MainPage/CourseCard";
+import CourseCard from "../../components/MainPage/CourseCard";
 import { Course } from "src/model/Course";
 
 const mockCourse: Course = {

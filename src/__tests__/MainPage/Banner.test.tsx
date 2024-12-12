@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Banner from "../components/MainPage/Banner";
+import Banner from "../../components/MainPage/Banner";
 
 describe("Banner", () => {
   it("배너 제목이 화면에 표시된다", () => {
