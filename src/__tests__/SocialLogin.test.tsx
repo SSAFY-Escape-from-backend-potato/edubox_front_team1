@@ -1,22 +1,22 @@
 import { render, screen } from "@testing-library/react";
-import SocialLogin from "../../components/LoginPage/SocialLogin";
+import SocialLogin from "../components/common/SocialLogin";
 
 describe("SocialLogin", () => {
   it("'간편 로그인' 텍스트가 표시되어야 한다", () => {
-    render(<SocialLogin />);
+    render(<SocialLogin text="간편 로그인" />);
 
     expect(screen.getByText("간편 로그인")).toBeInTheDocument();
   });
 
   it("소셜 로그인 버튼들이 모두 렌더링되어야 한다", () => {
-    render(<SocialLogin />);
+    render(<SocialLogin text="간편 로그인" />);
     const buttons = screen.getAllByRole("button");
 
     expect(buttons).toHaveLength(3);
   });
 
   it("각 소셜 로그인 버튼이 올바른 클래스를 가져야 한다", () => {
-    render(<SocialLogin />);
+    render(<SocialLogin text="간편 로그인" />);
 
     expect(screen.getByRole("button", { name: "카카오 로그인" })).toHaveClass(
       "kakao-btn"

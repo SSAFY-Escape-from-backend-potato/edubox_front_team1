@@ -14,6 +14,7 @@ const ValidationItem = ({ isValid, isEmpty, text }: ValidationItemProps) => {
       }`}
     >
       <i
+        data-testid="validation-icon"
         className={`fa-solid ${
           isEmpty ? "fa-check" : isValid ? "fa-check" : "fa-xmark"
         }`}

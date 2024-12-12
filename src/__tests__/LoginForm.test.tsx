@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import LoginForm from "../../components/LoginPage/LoginForm";
+import LoginForm from "../components/LoginPage/LoginForm";
 
 describe("LoginForm", () => {
   it("이메일과 비밀번호 입력창이 렌더링되어야 한다", () => {
