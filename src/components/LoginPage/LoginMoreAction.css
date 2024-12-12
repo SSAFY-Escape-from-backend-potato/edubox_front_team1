@@ -1,0 +1,20 @@
+.login-more-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  font-size: 12px;
+  color: #858a8d;
+}
+
+.more-action__text {
+  text-decoration: none;
+  color: #858a8d;
+  transition: color 0.3s;
+  text-decoration: underline;
+}
+
+.more-action-divider {
+  margin: 0 8px;
+  color: #e4e4e4;
+}
