@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import LoginMoreAction from "../../components/LoginPage/LoginMoreAction";
+import LoginMoreAction from "../components/LoginPage/LoginMoreAction";
 
 describe("LoginMoreAction", () => {
   it("이메일 찾기 링크가 존재해야 한다", () => {

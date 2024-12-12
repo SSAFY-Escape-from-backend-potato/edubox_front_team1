@@ -1,6 +1,6 @@
 import LoginForm from "src/components/LoginPage/LoginForm";
 import LoginMoreAction from "src/components/LoginPage/LoginMoreAction";
-import SocialLogin from "src/components/LoginPage/SocialLogin";
+import SocialLogin from "src/components/common/SocialLogin";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./LoginPage.css";
 
@@ -15,7 +15,7 @@ const LoginPage: React.FC = () => {
         </div>
         <LoginForm />
         <LoginMoreAction />
-        <SocialLogin />
+        <SocialLogin text="간편 로그인" />
       </div>
     </div>
   );

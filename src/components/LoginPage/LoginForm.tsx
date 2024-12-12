@@ -1,4 +1,4 @@
-import usePasswordVisibility from "src/hooks/usePasswordVisibility";
+import { usePasswordVisibility } from "src/hooks/usePasswordVisibility";
 import "./LoginForm.css";
 
 const LoginForm = () => {

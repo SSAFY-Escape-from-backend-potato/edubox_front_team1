@@ -1,0 +1,23 @@
+.signup-input-message {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: -6px;
+  font-size: 14px;
+}
+
+.signup-input-message.error {
+  color: #fa5252;
+}
+
+.signup-input-message.success {
+  color: #1dc078;
+}
+
+.signup-input-wrapper input[aria-invalid="true"] {
+  border-color: #fa5252;
+}
+
+.signup-input-wrapper input[aria-invalid="true"]:focus {
+  border-color: #fa5252;
+}

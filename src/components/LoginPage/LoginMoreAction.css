@@ -11,10 +11,7 @@
   text-decoration: none;
   color: #858a8d;
   transition: color 0.3s;
-}
-
-.more-action__text:hover {
-  color: #1dc078;
+  text-decoration: underline;
 }
 
 .more-action-divider {
