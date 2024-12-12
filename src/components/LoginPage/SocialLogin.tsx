@@ -1,6 +1,6 @@
-import KakaoButton from "./KakaoButton";
-import GoogleButton from "./GoogleButton";
-import NaverButton from "./NaverButton";
+import KakaoButton from "./Button/KakaoButton";
+import GoogleButton from "./Button/GoogleButton";
+import NaverButton from "./Button/NaverButton";
 import "./SocialLogin.css";
 
 const SocialLogin = () => {

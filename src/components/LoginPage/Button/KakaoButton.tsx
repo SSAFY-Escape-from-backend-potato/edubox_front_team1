@@ -1,8 +1,8 @@
-import "./SocialLogin.css";
+import "../SocialLogin.css";
 
 const KakaoButton = () => {
   return (
-    <button className="kakao-btn">
+    <button className="kakao-btn" aria-label="카카오 로그인">
       <svg
         width="18px"
         xmlns="http://www.w3.org/2000/svg"

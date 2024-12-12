@@ -1,8 +1,8 @@
-import "./SocialLogin.css";
+import "../SocialLogin.css";
 
 const GoogleButton = () => {
   return (
-    <button className="google-btn">
+    <button className="google-btn" aria-label="구글 로그인">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="18"

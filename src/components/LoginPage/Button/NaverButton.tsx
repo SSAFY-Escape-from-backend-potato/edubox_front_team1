@@ -1,8 +1,8 @@
-import "./SocialLogin.css";
+import "../SocialLogin.css";
 
 const NaverButton = () => {
   return (
-    <button className="naver-btn">
+    <button className="naver-btn" aria-label="네이버 로그인">
       <svg
         width="40"
         height="40"
@@ -10,7 +10,7 @@ const NaverButton = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_403_243)">
+        <g clipPath="url(#clip0_403_243)">
           <path
             d="M18 20H2C0.9 20 0 19.1 0 18V2C0 0.9 0.9 0 2 0H18C19.1 0 20 0.9 20 2V18C20 19.1 19.1 20 18 20Z"
             fill="#03C75A"
