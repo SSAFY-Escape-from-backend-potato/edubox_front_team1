@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./Header.css";
 
 const Header: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <header className="header">
       <nav className="nav">
@@ -30,7 +32,7 @@ const Header: React.FC = () => {
           <i className="fas fa-search fa"></i>
         </div>
         <div className="auth">
-          <button>로그인</button>
+          <button onClick={() => navigate("/login")}>로그인</button>
         </div>
       </nav>
     </header>

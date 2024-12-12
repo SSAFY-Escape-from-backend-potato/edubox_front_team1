@@ -32,6 +32,7 @@
   display: flex;
   gap: 20px;
   list-style: none;
+  min-width: 365px;
 }
 
 .menu li {
@@ -62,6 +63,12 @@
   padding: 4px 8px;
   margin: 0px 20px;
   flex-grow: 1;
+  min-width: 300px;
+}
+
+.search:focus-within {
+  border-color: #1dc078;
+  box-shadow: 0 0 0 1px #1dc078;
 }
 
 .search input {
@@ -92,6 +99,7 @@
   padding: 8px 16px;
   cursor: pointer;
   transition: background-color 0.3s;
+  min-width: 67px;
 }
 
 .auth button:hover {
