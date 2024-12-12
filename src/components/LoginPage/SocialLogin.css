@@ -1,0 +1,64 @@
+.social-login {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.social-login p {
+  color: #858a8d;
+  margin-bottom: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.social-login p::before,
+.social-login p::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background-color: #e4e4e4;
+  margin: 0 12px;
+}
+
+.social-btns {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-btns button {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #e4e4e4;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-btns button:hover {
+  background: #f8f9fa;
+}
+
+.kakao-btn {
+  background-color: #fee500 !important;
+}
+
+.google-btn {
+  background-color: #ffffff !important;
+}
+
+.naver-btn {
+  background-color: #03c75a !important;
+}
+
+@media (max-width: 480px) {
+  .social-btns {
+    flex-direction: column;
+  }
+}
