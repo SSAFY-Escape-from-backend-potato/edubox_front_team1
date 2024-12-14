@@ -27,7 +27,11 @@ const Settings: React.FC<SettingsProps> = ({
     <div className="settings-section">
       <div className="settings-card">
         <h2>계정 설정</h2>
-        <form className="settings-form" onSubmit={handleSubmit}>
+        <form
+          className="settings-form"
+          id="setting-form"
+          onSubmit={handleSubmit}
+        >
           <div className="form-group">
             <label htmlFor="name">이름</label>
             <input
@@ -38,6 +42,7 @@ const Settings: React.FC<SettingsProps> = ({
                 setFormData((prev) => ({ ...prev, name: e.target.value }))
               }
               placeholder="이름을 입력하세요"
+              autoComplete="name"
             />
           </div>
           <div className="form-group">

@@ -28,6 +28,7 @@ const EmailInput = ({
           placeholder="example@edubox.com"
           required
           aria-invalid={!isValidEmail && email !== ""}
+          autoComplete="username"
         />
         <button
           type="button"

@@ -7,11 +7,12 @@ const LoginForm = () => {
   return (
     <form className="login-form">
       <div className="input-group">
-        <input type="email" placeholder="이메일" required />
+        <input type="email" id="email-input" placeholder="이메일" required />
       </div>
       <div className="input-group password-group">
         <input
           type={showPassword ? "text" : "password"}
+          id="password-input"
           placeholder="비밀번호"
           required
         />

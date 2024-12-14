@@ -1,5 +1,6 @@
 import { Course } from "src/model/Course";
 import { UserProfile } from "src/model/UserProfile";
+import { User } from "src/model/User";
 
 export const courses: Course[] = [
   {
@@ -67,4 +68,9 @@ export const userProfile_: UserProfile = {
   image: "https://picsum.photos/300/207",
   completedCourses: 3,
   reviews: 0,
+};
+
+export const user_: User = {
+  id: 1,
+  email: "mukho@edubox.com",
 };
