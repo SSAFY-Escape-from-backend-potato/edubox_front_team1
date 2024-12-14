@@ -1,4 +1,5 @@
 import { Course } from "src/model/Course";
+import { UserProfile } from "src/model/UserProfile";
 
 export const courses: Course[] = [
   {
@@ -58,3 +59,12 @@ export const courses: Course[] = [
     thumbnail: "https://picsum.photos/300/206",
   },
 ];
+
+export const userProfile_: UserProfile = {
+  name: "묵호",
+  email: "mukho@edubox.com",
+  bio: "Made By Mukho",
+  image: "https://picsum.photos/300/207",
+  completedCourses: 3,
+  reviews: 0,
+};
