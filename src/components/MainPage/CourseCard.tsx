@@ -13,6 +13,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ course }) => {
         className="course-thumbnail"
         src={course.thumbnail}
         alt={course.title}
+        loading="lazy"
       />
       <div className="course-content">
         <h3 className="course-title">{course.title}</h3>
