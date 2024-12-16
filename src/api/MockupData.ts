@@ -1,6 +1,6 @@
-import { Course } from "src/model/Course";
-import { UserProfile } from "src/model/UserProfile";
-import { User } from "src/model/User";
+import { Course } from "../model/Course";
+import { UserProfile } from "../model/UserProfile";
+import { User } from "../model/User";
 import { Question } from "../model/Question";
 import { Comment } from "../model/Comment";
 

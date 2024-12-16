@@ -14,7 +14,11 @@ const CommunitySearch: React.FC<CommunitySearchProps> = ({ onSearch }) => {
   };
 
   return (
-    <form className="community-search" onSubmit={handleSubmit}>
+    <form
+      className="community-search"
+      onSubmit={handleSubmit}
+      data-testid="search-form"
+    >
       <div className="search-input-wrapper">
         <i className="fa-solid fa-magnifying-glass search-icon"></i>
         <input

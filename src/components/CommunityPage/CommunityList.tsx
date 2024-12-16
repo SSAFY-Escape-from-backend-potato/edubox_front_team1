@@ -20,7 +20,7 @@ const CommunityList: React.FC<CommunityListProps> = ({
   if (error) {
     return <div className="community-list-error">{error}</div>;
   }
-  
+
   return (
     <div className="community-list">
       {questions.map((question) => (
