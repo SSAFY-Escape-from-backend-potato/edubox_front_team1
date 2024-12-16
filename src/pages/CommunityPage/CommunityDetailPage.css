@@ -1,17 +1,17 @@
-.question-detail-page {
+.community-detail-page {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
   padding-top: 100px;
 }
 
-.question-detail-header {
+.community-detail-header {
   margin-bottom: 32px;
   border-bottom: 1px solid #e4e4e4;
   padding-bottom: 24px;
 }
 
-.question-detail-title h1 {
+.community-detail-title h1 {
   font-size: 24px;
   font-weight: 700;
   color: #1b1c1d;
@@ -19,7 +19,7 @@
   line-height: 1.4;
 }
 
-.question-detail-meta {
+.community-detail-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,7 +64,7 @@
   color: #1dc078;
 }
 
-.question-detail-content {
+.community-detail-content {
   font-size: 16px;
   line-height: 1.6;
   color: #424242;
@@ -74,7 +74,7 @@
   margin-bottom: 32px;
 }
 
-.question-tags {
+.community-tags {
   margin-top: 24px;
   display: flex;
   gap: 8px;
@@ -88,7 +88,7 @@
   color: #495057;
 }
 
-.question-actions {
+.community-actions {
   display: flex;
   justify-content: center;
   align-items: center;

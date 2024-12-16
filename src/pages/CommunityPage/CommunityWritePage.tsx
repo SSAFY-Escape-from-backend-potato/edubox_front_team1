@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import MDEditor from "@uiw/react-md-editor";
 import TagInput from "../../components/CommunityPage/TagInput";
 import rehypeSanitize from "rehype-sanitize";
-import "./QuestionWritePage.css";
+import "./CommunityWritePage.css";
 
-const QuestionWritePage = () => {
+const CommunityWritePage = () => {
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [content, setContent] = useState<string | undefined>("");
@@ -19,12 +19,12 @@ const QuestionWritePage = () => {
   };
 
   return (
-    <div className="question-write-page">
-      <div className="question-write-header">
+    <div className="community-write-page">
+      <div className="community-write-header">
         <h1>질문하기</h1>
         <p>프로그래밍과 관련된 질문을 해주세요.</p>
       </div>
-      <form className="question-write-form" onSubmit={handleSubmit}>
+      <form className="community-write-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <input
             type="text"
@@ -75,4 +75,4 @@ const QuestionWritePage = () => {
   );
 };
 
-export default QuestionWritePage;
+export default CommunityWritePage;

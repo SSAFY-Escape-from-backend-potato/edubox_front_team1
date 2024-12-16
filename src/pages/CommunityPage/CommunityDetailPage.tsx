@@ -4,9 +4,9 @@ import CommentList from "../../components/CommunityPage/CommentList";
 import CommentForm from "../../components/CommunityPage/CommentForm";
 import { questions } from "../../api/MockupData";
 import { comments } from "../../api/MockupData";
-import "./QuestionDetailPage.css";
+import "./CommunityDetailPage.css";
 
-const QuestionDetailPage = () => {
+const CommunityDetailPage = () => {
   const { id } = useParams();
 
   const question = questions[0]; // 임시 데이터
@@ -14,11 +14,11 @@ const QuestionDetailPage = () => {
   return (
     <>
       <Header />
-      <div className="question-detail-page">
-        <div className="question-detail-header">
-          <div className="question-detail-title">
+      <div className="community-detail-page">
+        <div className="community-detail-header">
+          <div className="community-detail-title">
             <h1>{question.title}</h1>
-            <div className="question-detail-meta">
+            <div className="community-detail-meta">
               <div className="author-info">
                 <img src={question.author.profileImage} alt="프로필" />
                 <span className="author-name">{question.author.name}</span>
@@ -31,11 +31,11 @@ const QuestionDetailPage = () => {
             </div>
           </div>
         </div>
-        <div className="question-detail-content">
+        <div className="community-detail-content">
           <div className="content-main">
             <p>{question.content}</p>
             {question.tags && (
-              <div className="question-tags">
+              <div className="community-tags">
                 {question.tags.map((tag) => (
                   <span key={tag} className="tag">
                     {tag}
@@ -44,7 +44,7 @@ const QuestionDetailPage = () => {
               </div>
             )}
           </div>
-          <div className="question-actions">
+          <div className="community-actions">
             <div className="like-count">
               <button className="btn-like">
                 <i className="fa-solid fa-heart"></i>
@@ -63,4 +63,4 @@ const QuestionDetailPage = () => {
   );
 };
 
-export default QuestionDetailPage;
+export default CommunityDetailPage;

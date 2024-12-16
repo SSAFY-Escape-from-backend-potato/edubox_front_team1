@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./QuestionSearch.css";
+import "./CommunitySearch.css";
 
-const QuestionSearch: React.FC = () => {
+const CommunitySearch: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -11,7 +11,7 @@ const QuestionSearch: React.FC = () => {
   };
 
   return (
-    <form className="question-search" onSubmit={handleSubmit}>
+    <form className="community-search" onSubmit={handleSubmit}>
       <div className="search-input-wrapper">
         <i className="fa-solid fa-magnifying-glass search-icon"></i>
         <input
@@ -26,4 +26,4 @@ const QuestionSearch: React.FC = () => {
   );
 };
 
-export default QuestionSearch;
+export default CommunitySearch;

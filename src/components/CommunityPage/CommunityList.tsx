@@ -1,25 +1,25 @@
 import { Link } from "react-router-dom";
 import { questions } from "../../api/MockupData";
-import "./QuestionList.css";
+import "./CommunityList.css";
 
-interface QuestionListProps {
+interface CommunityListProps {
   filter: string;
 }
 
-const QuestionList: React.FC<QuestionListProps> = ({ filter }) => {
+const CommunityList: React.FC<CommunityListProps> = ({ filter }) => {
   return (
-    <div className="question-list">
+    <div className="community-list">
       {questions.map((question) => (
         <Link
           to={`/community/question/${question.id}`}
           key={question.id}
-          className="question-item"
+          className="community-item"
         >
-          <div className="question-main">
+          <div className="community-main">
             <h3>{question.title}</h3>
             <p>{question.content}</p>
           </div>
-          <div className="question-meta">
+          <div className="community-meta">
             <span>{question.author.name}</span>
             <span>·</span>
             <span>{question.createdAt}</span>
@@ -29,7 +29,7 @@ const QuestionList: React.FC<QuestionListProps> = ({ filter }) => {
             <span>댓글 {question.commentCount}</span>
             <span> </span>
           </div>
-          <div className="question-likes">
+          <div className="community-likes">
             <i className="fa-solid fa-heart"></i>
             <span>{question.likeCount}</span>
           </div>
@@ -39,4 +39,4 @@ const QuestionList: React.FC<QuestionListProps> = ({ filter }) => {
   );
 };
 
-export default QuestionList;
+export default CommunityList;

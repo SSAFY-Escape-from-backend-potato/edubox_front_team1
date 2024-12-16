@@ -1,17 +1,17 @@
 import { Dispatch, SetStateAction } from "react";
-import "./QuestionFilter.css";
+import "./CommunityFilter.css";
 
-interface QuestionFilterProps {
+interface CommunityFilterProps {
   currentFilter: string;
   onFilterChange: Dispatch<SetStateAction<string>>;
 }
 
-const QuestionFilter: React.FC<QuestionFilterProps> = ({
+const CommunityFilter: React.FC<CommunityFilterProps> = ({
   currentFilter,
   onFilterChange,
 }) => {
   return (
-    <div className="question-filter">
+    <div className="community-filter">
       <button
         className={`filter-btn ${currentFilter === "latest" ? "active" : ""}`}
         onClick={() => onFilterChange("latest")}
@@ -34,4 +34,4 @@ const QuestionFilter: React.FC<QuestionFilterProps> = ({
   );
 };
 
-export default QuestionFilter;
+export default CommunityFilter;
