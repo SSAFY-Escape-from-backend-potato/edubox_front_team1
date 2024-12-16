@@ -1,0 +1,44 @@
+.question-search {
+  position: relative;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.search-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #858a8d;
+  font-size: 14px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 12px 8px 36px;
+  border: 1px solid #e4e4e4;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.search-input:focus {
+  border-color: #1dc078;
+  box-shadow: 0 0 0 3px rgba(29, 192, 120, 0.1);
+}
+
+.search-input::placeholder {
+  color: #adb5bd;
+}
+
+@media (max-width: 768px) {
+  .question-search {
+    width: 100%;
+  }
+}
