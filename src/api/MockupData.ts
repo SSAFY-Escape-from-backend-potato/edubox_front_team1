@@ -1,6 +1,8 @@
-import { Course } from "src/model/Course";
-import { UserProfile } from "src/model/UserProfile";
-import { User } from "src/model/User";
+import { Course } from "../model/Course";
+import { UserProfile } from "../model/UserProfile";
+import { User } from "../model/User";
+import { Question } from "../model/Question";
+import { Comment } from "../model/Comment";
 
 export const courses: Course[] = [
   {
@@ -74,3 +76,64 @@ export const user_: User = {
   id: 1,
   email: "mukho@edubox.com",
 };
+
+export const questions: Question[] = [
+  {
+    id: 2,
+    title: "test",
+    content: "ㅎㅇ",
+    author: {
+      id: 1,
+      name: "묵호",
+      profileImage: "https://picsum.photos/300/207",
+    },
+    createdAt: "2024-12-16",
+    viewCount: 0,
+    commentCount: 0,
+    likeCount: 0,
+    tags: [],
+  },
+  {
+    id: 1,
+    title: "React 상태 관리 질문입니다",
+    content: "Recoil과 Redux 중에서 어떤 것을 사용하는 것이 좋을까요?",
+    author: {
+      id: 1,
+      name: "묵호",
+      profileImage: "https://picsum.photos/300/207",
+    },
+    createdAt: "2024-01-20",
+    viewCount: 42,
+    commentCount: 2,
+    likeCount: 3,
+    tags: ["React", "상태관리", "Recoil", "Redux"],
+  },
+];
+
+export const comments: Comment[] = [
+  {
+    id: 1,
+    content: "안녕하세요! 이 문제는 다음과 같이 해결할 수 있습니다...",
+    author: {
+      id: 1,
+      name: "김멘토",
+      profileImage: "https://picsum.photos/200/208",
+      questionCount: 15,
+    },
+    createdAt: "2024-01-20",
+    likeCount: 5,
+    isAccepted: true,
+  },
+  {
+    id: 2,
+    content: "추가로 이런 방법도 있습니다...",
+    author: {
+      id: 2,
+      name: "이학습",
+      profileImage: "https://picsum.photos/200/209",
+      questionCount: 3,
+    },
+    createdAt: "2024-01-21",
+    likeCount: 2,
+  },
+];
