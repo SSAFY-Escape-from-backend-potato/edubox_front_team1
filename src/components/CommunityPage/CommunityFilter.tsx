@@ -1,9 +1,8 @@
-import { Dispatch, SetStateAction } from "react";
 import "./CommunityFilter.css";
 
 interface CommunityFilterProps {
   currentFilter: string;
-  onFilterChange: Dispatch<SetStateAction<string>>;
+  onFilterChange: (filter: "latest" | "popular" | "noAnswer") => void;
 }
 
 const CommunityFilter: React.FC<CommunityFilterProps> = ({

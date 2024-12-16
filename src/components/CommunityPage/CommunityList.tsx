@@ -1,12 +1,26 @@
 import { Link } from "react-router-dom";
-import { questions } from "../../api/MockupData";
+import { Question } from "src/model/Question";
 import "./CommunityList.css";
 
 interface CommunityListProps {
-  filter: string;
+  questions: Question[];
+  loading?: boolean;
+  error?: string | null;
 }
 
-const CommunityList: React.FC<CommunityListProps> = ({ filter }) => {
+const CommunityList: React.FC<CommunityListProps> = ({
+  questions,
+  loading,
+  error,
+}) => {
+  if (loading) {
+    return <div className="community-list-loading">로딩 중...</div>;
+  }
+
+  if (error) {
+    return <div className="community-list-error">{error}</div>;
+  }
+  
   return (
     <div className="community-list">
       {questions.map((question) => (

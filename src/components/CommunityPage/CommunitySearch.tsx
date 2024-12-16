@@ -1,13 +1,16 @@
 import { useState } from "react";
 import "./CommunitySearch.css";
 
-const CommunitySearch: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+interface CommunitySearchProps {
+  onSearch: (term: string) => void;
+}
+
+const CommunitySearch: React.FC<CommunitySearchProps> = ({ onSearch }) => {
+  const [searchInput, setSearchInput] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // 검색 로직 구현
-    console.log("Searching for:", searchTerm);
+    onSearch(searchInput);
   };
 
   return (
@@ -16,8 +19,8 @@ const CommunitySearch: React.FC = () => {
         <i className="fa-solid fa-magnifying-glass search-icon"></i>
         <input
           type="text"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          value={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
           placeholder="검색어를 입력해주세요"
           className="search-input"
         />

@@ -1,14 +1,21 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../../components/common/Header";
 import CommunityList from "../../components/CommunityPage/CommunityList";
 import CommunityFilter from "../../components/CommunityPage/CommunityFilter";
 import CommunitySearch from "../../components/CommunityPage/CommunitySearch";
+import { useFilter } from "../../hooks/useFilter";
+import { useSearch } from "../../hooks/useSearch";
+import { useCommunityList } from "../../hooks/useCommunityList";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./CommunityPage.css";
 
 const CommunityPage: React.FC = () => {
-  const [filter, setFilter] = useState("latest"); // latest, popular, noAnswer
+  const { filter, handleFilterChange } = useFilter();
+  const { searchTerm, handleSearch } = useSearch();
+  const { filteredQuestions, loading, error } = useCommunityList(
+    filter,
+    searchTerm
+  );
 
   return (
     <>
@@ -23,17 +30,21 @@ const CommunityPage: React.FC = () => {
             <div className="community-controls-left">
               <CommunityFilter
                 currentFilter={filter}
-                onFilterChange={setFilter}
+                onFilterChange={handleFilterChange}
               />
             </div>
             <div className="community-controls-right">
-              <CommunitySearch />
+              <CommunitySearch onSearch={handleSearch} />
               <Link to="/community/write" className="btn-write">
                 질문하기
               </Link>
             </div>
           </div>
-          <CommunityList filter={filter} />
+          <CommunityList
+            questions={filteredQuestions}
+            loading={loading}
+            error={error}
+          />
         </div>
       </div>
     </>
