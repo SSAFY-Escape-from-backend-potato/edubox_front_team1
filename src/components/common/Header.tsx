@@ -25,7 +25,7 @@ const Header: React.FC = () => {
             <a href="/mentors">멘토링</a>
           </li>
           <li>
-            <a href="/community">커뮤니티</a>
+            <a href="/community/question">커뮤니티</a>
           </li>
         </ul>
         <div className="search">

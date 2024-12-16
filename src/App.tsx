@@ -5,6 +5,9 @@ import MainPage from "./pages/MainPage/MainPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import UserPage from "./pages/UserPage/UserPage";
+import QuestionPage from "./pages/CommunityPage/QuestionPage";
+import QuestionDetailPage from "./pages/CommunityPage/QuestionDetailPage";
+import QuestionWritePage from "./pages/CommunityPage/QuestionWritePage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import "./styles/App.css";
 
@@ -17,6 +20,11 @@ const App: React.FC = () => {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/user/:id" element={<UserPage />} />
+          <Route path="/community">
+            <Route path="question" element={<QuestionPage />} />
+            <Route path="question/:id" element={<QuestionDetailPage />} />
+            <Route path="write" element={<QuestionWritePage />} />
+          </Route>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Router>
